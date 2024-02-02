@@ -8,34 +8,59 @@
 
 <section id="about" class="about">
     <div class="container">
+        
+      
+            
 
         <div class="row no-gutters">
-            <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-lg-start"></div>
+            <img src="~/Lonely/assets/img/Anasayfa/Anasayfa2.jpg"  class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-lg-start"></>
             <div class="col-xl-7 ps-0 ps-lg-5 pe-lg-1 d-flex align-items-stretch">
                 <div class="content d-flex flex-column justify-content-center">
+                    
                     <h3>Hakkımda</h3>
                     <p>
-                        &nbsp&nbsp&nbsp Merhaba! Ben bir freelance yazılım uzmanı ve dijital göçebe olarak, dijital dünyada benzersiz çözümler sunmak için buradayım. Yılların tecrübesi ve geniş teknik bilgi birikimimle, her türlü yazılım ihtiyacınıza cevap veriyorum. Hem küçük işletmeler hem de bireyler için özel yazılımlar geliştiriyor, projelerinizi hayata geçiriyorum. Dünyayı dolaşırken çalışma özgürlüğü ve esneklik arayışında olan bir dijital gezgin olarak, uzaktan çalışma kültürünü benimseyen projelerde yer alıyorum. Siz de benimle birlikte, dijital dünyada benzersiz bir deneyim yaşamak istiyorsanız, projelerinizi hayata geçirmek için buradayım. İhtiyaçlarınıza özel çözümler için birlikte çalışalım!
+                        Merhaba! Ben bir freelance yazılım uzmanı ve dijital göçebe olarak, dijital dünyada benzersiz çözümler sunmak için buradayım. Yılların tecrübesi ve geniş teknik bilgi birikimimle, her türlü yazılım ihtiyacınıza cevap veriyorum. Hem küçük işletmeler hem de bireyler için özel yazılımlar geliştiriyor, projelerinizi hayata geçiriyorum. Dünyayı dolaşırken çalışma özgürlüğü ve esneklik arayışında olan bir dijital gezgin olarak, uzaktan çalışma kültürünü benimseyen projelerde yer alıyorum. Siz de benimle birlikte, dijital dünyada benzersiz bir deneyim yaşamak istiyorsanız, projelerinizi hayata geçirmek için buradayım. İhtiyaçlarınıza özel çözümler için birlikte çalışalım!
+                    
                     </p>
-                    @foreach(var item in Model)
-                    {
-                      <div class="row">
-                        <div class="col-md-6 d-md-flex align-items-md-stretch">
+                    
+                    <div class="row">
+                        @foreach(var item in Model)
+                        {
+                            <div class="col-md-6 d-md-flex align-items-md-stretch">
                             <div class="count-box">
                                 <i class="bi bi-emoji-smile"></i>
                                 <span data-purecounter-start="0" data-purecounter-end="@item.AboutStatistics" data-purecounter-duration="1" class="purecounter"></span>
-                                    <p><strong>@item.AboutStatName</strong> &nbsp&nbsp&nbsp @item.AboutStatDesc</p>
+                                <p><strong>@item.AboutStatName</strong> @item.AboutStatDesc</p>
+                            </div>
+                             </div>
+                        }
+                        
+      
+@*         
+                        <div class="col-md-6 d-md-flex align-items-md-stretch">
+                            <div class="count-box">
+                                <i class="bi bi-journal-richtext"></i>
+                                <span data-purecounter-start="0" data-purecounter-end="85" data-purecounter-duration="1" class="purecounter"></span>
+                                <p><strong>Projects</strong> adipisci atque cum quia aspernatur totam laudantium et quia dere tan</p>
                             </div>
                         </div>
 
-                        
+                        <div class="col-md-6 d-md-flex align-items-md-stretch">
+                            <div class="count-box">
+                                <i class="bi bi-clock"></i>
+                                <span data-purecounter-start="0" data-purecounter-end="12" data-purecounter-duration="1" class="purecounter"></span>
+                                <p><strong>Years of experience</strong> aut commodi quaerat modi aliquam nam ducimus aut voluptate non vel</p>
+                            </div>
+                        </div>
 
-                        
-
-                        
-                      </div>
-                    }
-                    
+                        <div class="col-md-6 d-md-flex align-items-md-stretch">
+                            <div class="count-box">
+                                <i class="bi bi-award"></i>
+                                <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+                                <p><strong>Awards</strong> rerum asperiores dolor alias quo reprehenderit eum et nemo pad der</p>
+                            </div>
+                        </div> *@
+                    </div>
                 </div><!-- End .content-->
             </div>
         </div>

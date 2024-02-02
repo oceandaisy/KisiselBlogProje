@@ -1,0 +1,84 @@
+﻿@using KisiselBlogProje.Concrete
+@model List<Education>
+
+
+@{
+    ViewData["Title"] = "Resume";
+}
+<section id="resume" class="resume section-bg">
+    <div class="container">
+        
+        
+            
+        
+        <div class="section-title">
+            
+            <p>&nbsp&nbsp&nbsp Hayat yolculuğum, fizikle başladı ve bu alandaki tutkum beni metroloji, nükleer tıp ve sağlık bilimleri gibi heyecan verici dallara yönlendirdi. Yıllar içinde edindiğim deneyimler, bilimsel merakımı besledi ve beni farklı alanlarda keşiflere yönlendirdi. Son durağım ise yazılım dünyası oldu. Yazılıma duyduğum ilgi, bu alanda kendimi geliştirmeme ve kariyerimi bu yönüyle şekillendirmeme olanak tanıdı. Fiziksel dünyadan dijital dünyaya geçişim, beni problem çözme ve yaratıcılık konularında daha da motive etti. Şimdi, yazılım uzmanı olarak kariyerime devam ederken, geçmişimden gelen çeşitli disiplinler arası bakış açısıyla benzersiz ve etkili çözümler üretmeye odaklanıyorum.</p>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-6">
+                
+                
+
+                <h3 class="resume-title">Eğitim Geçmişi</h3>
+                @foreach (var item in Model)
+               {
+                    <div class="resume-item">
+                    <h4>@item.EducationName</h4>
+                    <h5>@item.EducationDate</h5>
+                    <p><em>@item.EducationSchool, @item.EducationLocation</em></p>
+                        <p>&nbsp&nbsp&nbsp @item.EducationDesc</p>
+                </div>
+               }
+                
+                
+            </div>
+            <div class="col-lg-6">
+                <h3 class="resume-title">Profesyonel Deneyim</h3>
+                <div class="resume-item">
+                    <h4>Freelance Yazılım Uzmanı</h4>
+                    <h5>2030-Şu Anda</h5>
+                    <p><em></em></p>
+                    <p>
+                        <ul>
+                            <li>Farklı sektörlerden müşterilerle işbirliği yaparak özel yazılım çözümleri ürettim.</li>
+                            <li>Web uygulamaları ve e-ticaret siteleri geliştirdim, müşteri ihtiyaçlarına uygun özelleştirilmiş çözümler sundum.</li>
+                            <li>Mevcut projelerde performans iyileştirmeleri ve güvenlik güncellemeleri sağladım.</li>
+                            
+                        </ul>
+                    </p>
+                </div>
+                <div class="resume-item">
+                    <h4>Yazılım Mühendisi</h4>
+                    <h5>2025-2030</h5>
+                    <p><em>İstanbul</em></p>
+                    <p>
+                        <ul>
+                            <li>Karmaşık sistemlerde çalışarak büyük ölçekli yazılım projelerinde yer aldım.</li>
+                            <li>Takım içinde sorumluluklar alarak proje süreçlerini yönettim ve projelerin bütünlüğünü sağladım.</li>
+                            <li>Veritabanı yönetimi ve entegrasyonları üzerinde deneyim kazandım.</li>
+                            
+                        </ul>
+                    </p>
+                </div>
+
+                <div class="resume-item">
+                    <h4>Yazılım Geliştirme Stajyeri</h4>
+                    <h5>2024-2025</h5>
+                    <p><em>İstanbul</em></p>
+                    <p>
+                        <ul>
+                            <li>Yenilikçi projelerde stajyer olarak yer alarak yazılım geliştirme süreçlerini öğrendim.</li>
+                            <li>Eğitim ve mentorluk programlarına katılarak teknik becerilerimi geliştirdim.</li>
+                            <li>Ekip içinde işbirliği yaparak etkili iletişim ve problem çözme yeteneklerimi pekiştirdim.</li>
+
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+

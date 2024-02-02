@@ -1,0 +1,43 @@
+﻿@using KisiselBlogProje.Concrete
+@model List<Blog>
+@{
+    ViewData["Title"] = "Blog";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<section id="about" class="about">
+    <div class="container">
+        <h2>Dijital Göçebe Notları: Yaşadığım Ülkelerdeki Deneyimler</h2>
+        <p>
+            &nbsp&nbsp&nbsp Merhaba seyahatseverler! Blog köşemde, bir dijital göçebe olarak dünya üzerindeki farklı coğrafyalarda geçirdiğim zamanı ve bu ülkelerle ilgili hislerimi sizinle paylaşmaktan heyecan duyuyorum. Yolculuğum, sadece yeni yerler görmekle kalmayıp, aynı zamanda bu yerlerin kültürlerini anlama ve içselleştirme serüvenini içeriyor.
+
+            Her bir ülke, kendi benzersiz hikayesini anlatan bir sayfa gibidir. Sitemde, yaşadığım bu ülkelerde karşılaştığım insanlar, lezzetler, doğal güzellikler ve kültürel zenginliklere dair anekdotlarımı bulacaksınız. Dijital göçebe olarak geçirdiğim yılların ardından edindiğim deneyimlerle dolu bu köşede, seyahat etmenin güzelliklerini ve bazen zorluklarını keşfetmeye davet ediyorum. Yolculuklarıma eşlik etmek ve dünya üzerindeki renkli anıları birlikte paylaşmak için sizi bekliyorum. Keyifli okumalar!
+        </p>
+        <p>&nbsp&nbsp&nbsp</p>
+        <p>&nbsp&nbsp&nbsp</p>
+        
+
+
+        <div class="row no-gutters">
+            @foreach(var item in Model)
+            {
+                <img src="@item.BlogImage" class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-lg-start" alt="" />
+                
+                <div class="col-xl-7 ps-0 ps-lg-5 pe-lg-1 d-flex align-items-stretch">
+                    <div class="content d-flex flex-column justify-content-center">
+
+                        <h3>@item.BlogCountry , @item.BlogCity</h3>
+                        <p>
+                            &nbsp&nbsp&nbsp @item.BlogDesc
+                        </p>
+
+                    </div><!-- End .content-->
+                </div>
+            }
+            
+            
+        </div>
+
+    </div>
+</section>
+

@@ -1,0 +1,94 @@
+﻿@using KisiselBlogProje.Concrete
+@model List<Testimonial>
+@{
+    ViewData["Title"] = "Services";
+}
+
+<section id="services" class="services section-bg">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Hizmetler</h2>
+            <p>Freelance Yazılım Mühendisi olarak, müşteri odaklı hizmet anlayışıyla sunduğum çeşitli yazılım çözümleri ile işinizi dijital dünyada daha ileri taşımak için buradayım. Aşağıda, sizin için özel olarak sunabileceğim bazı ana hizmetleri bulabilirsiniz:</p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                <div class="icon-box">
+                    <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                    <h4 class="title"><a href="">Özel Yazılım Geliştirme</a></h4>
+                    <p class="description">Özel iş ihtiyaçlarınıza uygun, kullanıcı dostu ve güvenilir yazılımların geliştirilmesi.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                <div class="icon-box">
+                    <div class="icon"><i class="bx bx-file"></i></div>
+                    <h4 class="title"><a href="">Web Uygulama Geliştirme</a></h4>
+                    <p class="description">Modern teknolojilerle özelleştirilmiş web uygulamalarının tasarımı, geliştirilmesi ve bakımı.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                <div class="icon-box">
+                    <div class="icon"><i class="bx bx-tachometer"></i></div>
+                    <h4 class="title"><a href="">E-ticaret Çözümleri</a></h4>
+                    <p class="description">Güvenli ve etkili e-ticaret platformları oluşturarak online satışlarınızı artırın.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                <div class="icon-box">
+                    <div class="icon"><i class="bx bx-world"></i></div>
+                    <h4 class="title"><a href="">Veritabanı Yönetimi</a></h4>
+                    <p class="description">Veritabanı tasarımı, optimizasyonu ve yönetimiyle ilgili profesyonel destek.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+<section id="testimonials" class="testimonials section-bg">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Referanslar</h2>
+            <p></p>
+        </div>
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+            <div class="swiper-wrapper">
+                
+                @foreach(var item in Model)
+                {
+                    
+                
+
+                <div class="swiper-slide">
+                    <div class="testimonial-item">
+                        <p>
+                            <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                            @item.CustomerComment
+                            <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                        </p>
+                        <img src="@item.CustomerImage" class="testimonial-img" alt="">
+                        <h3>@item.CustomerName</h3>
+                        <h4>@item.CustomerTitle</h4>
+                    </div>
+                </div><!-- End testimonial item -->
+                }
+                <!-- End testimonial item -->
+
+                <!-- End testimonial item -->
+
+                <!-- End testimonial item -->
+
+                
+
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </div>
+</section>
